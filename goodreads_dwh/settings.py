@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-g^p=$rpw+o06wk+u_e4a=9ura-j_rr8-jyxpnpjno1-@g)^*ax
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'crawl_goodreads.apps.CrawlGoodreadsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
