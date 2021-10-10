@@ -42,8 +42,8 @@ class Information_User_Detail(models.Model):
 
 class User_Rating_Information(models.Model):
 
-    Book_Info = models.ForeignKey(Information_Book_Detail)
-    User_Info = models.ForeignKey(Information_Book_Detail)
+    Book_Info = models.ForeignKey(Information_Book_Detail, on_delete=models.PROTECT)
+    User_Info = models.ForeignKey(Information_Book_Detail, on_delete=models.PROTECT)
     book_url = models.CharField(max_length=100)
     user_rating = models.FloatField()
  
@@ -51,3 +51,6 @@ class User_Rating_Information(models.Model):
         db_table = "User_Rating"
         verbose_name = 'User Rating'
         verbose_name_plural = 'User_Ratings'
+
+    def __str__(self):
+        return "{} - {}".format(self.User_Info, self.Book_Info)
