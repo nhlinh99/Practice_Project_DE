@@ -46,7 +46,7 @@ class User_Rating_Information(models.Model):
     User_Info = models.ForeignKey(Information_Book_Detail, on_delete=models.PROTECT)
     book_url = models.CharField(max_length=100)
     user_rating = models.FloatField()
- 
+
     class Meta:
         db_table = "User_Rating"
         verbose_name = 'User Rating'
