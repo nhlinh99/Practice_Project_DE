@@ -15,5 +15,5 @@
 https://github.com/sushantkumr/Django-Web-Crawler
 https://viblo.asia/p/crawl-data-voi-selenium-django-postgresql-RnB5pMeDKPG
 https://soshace.com/creating-real-time-api-with-beautiful-soup-and-django-rest-framework/
-https://arctype.com/blog/analytics-dashboard-django/
+https://github.com/app-generator/django-gradient-able
 https://github.com/ontheskyl/Data_Science_Goodreads (my own)
