@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import dashboard_with_pivot
+from django.views.generic.base import TemplateView
 
 # http://127.0.0.1/dashboard/
 urlpatterns = [
-    path('', dashboard_with_pivot, name='dashboard'),
+    path('', TemplateView.as_view(template_name='index.html')),
 ]
