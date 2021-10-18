@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from dashboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('api/', include('crawl_goodreads.urls')),
-    path("dashboard/", include('dashboard.urls')),
-    path("", include("apps.authentication.urls")), # Auth routes - login / register
-    path("", include("apps.app.urls"))             # UI Kits Html files
+    path("", include("authentication.urls")), # Auth routes - login / register
+    path("", include("dashboard.urls")),             # UI Kits Html files
 ]

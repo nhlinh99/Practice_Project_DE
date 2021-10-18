@@ -1,7 +1,17 @@
-from django.urls import path
-from django.views.generic.base import TemplateView
+# -*- encoding: utf-8 -*-
+"""
+Copyright (c) 2019 - present AppSeed.us
+"""
 
-# http://127.0.0.1/dashboard/
+from django.urls import path, re_path
+from dashboard import views
+
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html')),
+
+    # The home page
+    path('', views.index, name='home'),
+
+    # Matches any html file
+    re_path(r'^.*\.*', views.pages, name='pages'),
+
 ]
