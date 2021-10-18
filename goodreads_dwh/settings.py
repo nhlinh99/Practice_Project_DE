@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')
 # Application definition
 
 INSTALLED_APPS = [
-    'dashboard',
+    'goodreads_dwh.apps.dashboard',
     # 'crawl_goodreads.apps.CrawlGoodreadsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +57,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'goodreads_dwh.urls'
 LOGIN_REDIRECT_URL = "home"  # Route defined in app/urls.py
 LOGOUT_REDIRECT_URL = "home"  # Route defined in app/urls.py
-TEMPLATE_DIR = os.path.join(CORE_DIR, "dashboard/templates")  # ROOT dir for templates
+TEMPLATE_DIR = os.path.join(CORE_DIR, "templates")  # ROOT dir for templates
 
 TEMPLATES = [
     {
@@ -128,7 +128,7 @@ STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(CORE_DIR, 'dashboard/static'),
+    os.path.join(CORE_DIR, 'static'),
 )
 
 # Default primary key field type
